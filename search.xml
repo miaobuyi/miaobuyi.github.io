@@ -8,7 +8,7 @@
       <link href="/2023/03/13/linux%E5%9F%BA%E7%A1%80%E5%92%8Cc%E9%AB%98%E7%BA%A7/"/>
       <url>/2023/03/13/linux%E5%9F%BA%E7%A1%80%E5%92%8Cc%E9%AB%98%E7%BA%A7/</url>
       
-        <content type="html"><![CDATA[<p>嵌入式:以应用为中心，以计算机为基础,软硬件可裁剪，适用于对功能、可靠性、成本、体积、功耗有严格要求的专用计算机系统。</p><blockquote><p>linux体系结构</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h4 id="vim编辑器"><a href="#vim编辑器" class="headerlink" title="vim编辑器"></a>vim编辑器</h4><blockquote><h6 id="底行模式"><a href="#底行模式" class="headerlink" title="底行模式"></a>底行模式</h6><ul><li><strong><font style="color : #95ba ">s&#x2F;字符串1&#x2F;字符串2</font></strong><ul><li>只替换这行中的第一个字符串1</li></ul></li><li><strong><font style="color : #95ba ">%s&#x2F;字符串1&#x2F;字符串2</font></strong><ul><li>替换文件每行的第一个字符串1</li></ul></li><li><strong><font style="color : #95ba ">%s&#x2F;字符串1&#x2F;字符串2&#x2F;g</font></strong><ul><li>替换文件中的所有字符串1</li></ul></li><li><strong><font style="color : #95ba ">set mouse&#x3D;a </font></strong><ul><li>让光标跟着鼠标移动</li></ul></li><li><strong><font style="color : #95ba ">set mouse-&#x3D;a</font></strong><ul><li>让贯标不要跟着鼠标移动</li></ul></li></ul><h6 id="vsp"><a href="#vsp" class="headerlink" title="vsp"></a>vsp</h6><ul><li>vsp +文件名<ul><li>在窗口的中再打开一个文件，两边同时打开</li></ul></li><li>ctrl+w<ul><li>切换窗口</li></ul></li></ul></blockquote><h4 id="gcc编译器"><a href="#gcc编译器" class="headerlink" title="gcc编译器"></a>gcc编译器</h4><blockquote><ol><li><strong><font style="color : #95ba ">预处理</font></strong> -E <ol><li>处理头文件和宏定义<ul><li>gcc -E 1.c -o 1.i</li></ul></li></ol></li><li><strong><font style="color : #95ba ">编译</font></strong> -S<ol><li>检查代码的错误<ul><li>gcc -S 1.i -o 1.s</li></ul></li></ol></li><li><strong><font style="color : #95ba ">汇编</font></strong> -c<ol><li>将文件编程计算机能够识别的二进制文件<ul><li>gcc -c 1.s -o 1.o</li></ul></li></ol></li><li><strong><font style="color : #95ba ">链接</font></strong><ol><li>生产执行文件<ul><li>gcc 1.o -o 1.out</li></ul></li></ol></li><li><strong><font style="color : #95ba ">选项</font></strong><ul><li>-o<ul><li>修改执行文件名</li></ul></li><li>-Wall<ul><li>显示所有警告</li></ul></li><li>-w<ul><li>隐藏所有警告</li></ul></li></ul></li></ol></blockquote><h4 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h4><blockquote><ol><li><p><strong><font style="color : #95ba ">chmod —修改文件权限</font></strong></p><ul><li>u  –用户自己</li><li>g  – 用户组</li><li>o  –其他用户</li></ul><ol><li>chmod u+x 文件名   —给当前用户增加执行权限</li><li>chmod +x 文件名   —给所有用户增加执行权限</li><li>chmod -x 文件名    —给所有用户减去执行权限</li></ol></li><li><p><strong><font style="color : #95ba ">硬链接</font></strong></p><ol><li><p>用法</p><ul><li>ln 文件名 连接文件名<ul><li>如果把本体文件删掉，依旧可以单独试用，类型和原文件一模一样，移动源文件也依旧可以</li></ul></li></ul></li><li><p>选项 -s  —改成软连接</p><ul><li>ln -s 文件名 软连接文件名<ul><li>如果本体文件删除或者移动，软连接失效；大大缩小了文件的大小</li></ul></li></ul></li></ol></li></ol></blockquote><h4 id="文件的压缩和解压"><a href="#文件的压缩和解压" class="headerlink" title="文件的压缩和解压"></a>文件的压缩和解压</h4><blockquote><ol><li><p><strong><font style="color : #95ba ">gzip和gunzip</font></strong></p><ul><li>源文件被替换成之后的文件，会生成一个.gz的压缩文件，用vi能看到源文件内容，用cat在终端查看乱码</li></ul></li><li><p><strong><font style="color : #95ba ">bzip2和bunzip2</font></strong></p><ul><li>相比于gzip，压缩性能较弱，但是时间快</li></ul></li><li><p><strong><font style="color : #95ba ">xz和unxz</font></strong></p><ul><li>同第二个</li></ul></li></ol></blockquote>]]></content>
       
       
       <categories>
@@ -23,6 +23,25 @@
             <tag> linux </tag>
             
             <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hello world</title>
+      <link href="/2023/03/08/hello-world/"/>
+      <url>/2023/03/08/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 数字电路 </tag>
             
         </tags>
       
