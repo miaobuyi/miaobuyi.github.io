@@ -15,8 +15,6 @@
           
           <category> C语言 </category>
           
-          <category> 嵌入式 </category>
-          
       </categories>
       
       
@@ -125,8 +123,6 @@
       
       <categories>
           
-          <category> shell </category>
-          
           <category> linux </category>
           
       </categories>
@@ -233,7 +229,7 @@
       
       <categories>
           
-          <category> Shell </category>
+          <category> linux </category>
           
       </categories>
       
@@ -242,7 +238,7 @@
             
             <tag> linux </tag>
             
-            <tag> Shell </tag>
+            <tag> shell </tag>
             
             <tag> sh </tag>
             
@@ -261,8 +257,6 @@
       
       
       <categories>
-          
-          <category> 嵌入式 </category>
           
           <category> linux </category>
           
