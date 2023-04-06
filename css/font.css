@@ -1,13 +1,13 @@
-@font-face{
+/* @font-face{
     font-family: 'XHei_Intel';
     font-display: swap;
     src: url('../font/XHei_Intel.TTC') format("truetype");
-}
-@font-face{
+} */
+/* @font-face{
     font-family: 'Menlo';
     font-display: swap;
     src: url('../font/Menlo-Regular-1.ttf') format("truetype");
-}
+} */
 @font-face{
     font-family: 'CircularBody';
     font-display: swap;

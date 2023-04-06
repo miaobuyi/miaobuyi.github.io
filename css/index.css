@@ -1374,7 +1374,7 @@ body {
   background: var(--global-bg);
   color: var(--font-color);
   font-size: var(--global-font-size);
-  font-family: CircularBody,XHei_Intel,Menlo;
+  font-family: CircularBody;
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -1684,7 +1684,7 @@ figure.highlight pre .javascript .function {
 #article-container pre,
 #article-container code {
   font-size: 18px;
-  font-family: CircularBody,XHei_Intel,Menlo !important;
+  font-family: CircularBody !important;
 }
 #article-container code {
   padding: 2px 4px;
