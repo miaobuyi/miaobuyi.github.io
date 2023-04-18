@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>vim模板</title>
+      <link href="/2023/04/17/vim%E6%A8%A1%E6%9D%BF/"/>
+      <url>/2023/04/17/vim%E6%A8%A1%E6%9D%BF/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>vim ./vimrc</p></blockquote><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">set number</span><br><span class="line"></span><br><span class="line">set shiftwidth=4</span><br><span class="line">set tabstop=4</span><br><span class="line">set expandtab</span><br><span class="line">set autoindent          "设置自动缩进</span><br><span class="line"></span><br><span class="line">"新建.c,.h,.sh,.java文件，自动插入文件头</span><br><span class="line">autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java exec ":call SetTitle()"</span><br><span class="line">""定义函数SetTitle，自动插入文件头</span><br><span class="line">func SetTitle()</span><br><span class="line">    "如果文件类型为.sh文件</span><br><span class="line">        call setline(1,          "/***********************************************************")</span><br><span class="line">        call append(line("."),   "  &gt; File Name: ".expand("%"))</span><br><span class="line">        call append(line(".")+1, "  &gt; Author: yzy")</span><br><span class="line">        call append(line(".")+2, "  &gt; blog: miaobuyi.github.io")</span><br><span class="line">        call append(line(".")+3, "  &gt; Created Time: ".strftime("%c"))</span><br><span class="line">        call append(line(".")+4, "  &gt; Modified Time:".strftime("%c"))</span><br><span class="line">        call append(line(".")+5, " *******************************************************/")</span><br><span class="line">        call append(line(".")+6, "") </span><br><span class="line">    if expand("%:e") == 'cpp' </span><br><span class="line">        call append(line(".")+7, "#include &lt;iostream&gt;")</span><br><span class="line">        call append(line(".")+8, "") </span><br><span class="line">        call append(line(".")+9, "using namespace std;")</span><br><span class="line">        call append(line(".")+10, "") </span><br><span class="line">        call append(line(".")+11, "int main(){")</span><br><span class="line">        call append(line(".")+12, "") </span><br><span class="line">        call append(line(".")+13, "    cout &lt;&lt; \"hello...\"  &lt;&lt; endl;")</span><br><span class="line">        call append(line(".")+14, "    return 0;")</span><br><span class="line">        call append(line(".")+15, "}")</span><br><span class="line">        call append(line(".")+16, "") </span><br><span class="line">    endif</span><br><span class="line">    if expand("%:e") == 'c' </span><br><span class="line">        call append(line(".")+7, "#include &lt;stdio.h&gt;")</span><br><span class="line">        call append(line(".")+8, "#include &lt;string.h&gt;")</span><br><span class="line">        call append(line(".")+9, "") </span><br><span class="line">        call append(line(".")+10, "int main(int argc,char *argv[])")</span><br><span class="line">        call append(line(".")+11, "{")</span><br><span class="line">        call append(line(".")+12, "") </span><br><span class="line">        call append(line(".")+13, "    ")</span><br><span class="line">        call append(line(".")+14, "    return 0;")</span><br><span class="line">        call append(line(".")+15, "}")</span><br><span class="line">        call append(line(".")+16, "") </span><br><span class="line">    endif</span><br><span class="line">endfunc</span><br><span class="line">"新建文件后，自动定位到文件末尾</span><br><span class="line">autocmd BufNewFile * normal G</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> VIM </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VIM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网络编程</title>
       <link href="/2023/04/10/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
       <url>/2023/04/10/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</url>
@@ -99,9 +124,9 @@
       
         <tags>
             
-            <tag> IO </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> IO </tag>
             
         </tags>
       
