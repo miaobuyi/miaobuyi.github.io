@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>面试题</title>
+      <link href="/2023/05/05/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <url>/2023/05/05/%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一语句实现x是否为2的若干次幂的判断。"><a href="#一语句实现x是否为2的若干次幂的判断。" class="headerlink" title="一语句实现x是否为2的若干次幂的判断。"></a>一语句实现x是否为2的若干次幂的判断。</h3><p><strong>X<strong><strong>与X-1</strong></strong>做位运算中的</strong> <strong>与运算</strong></p><h2 id="终端程序"><a href="#终端程序" class="headerlink" title="终端程序"></a>终端程序</h2><p>中断是嵌入式系统中重要的组成部分，这导致了很多编译开发商提供一种扩展—让标准C支持中断。具代表事实是，产生了一个新的关键字 __interrupt。下面的代码就使用了__interrupt关键字去定义了一个中断服务子程序(ISR)，请评论一下这段代码的。<br> __interrupt double compute_area (double radius)<br> {<br>    double area = PI * radius * radius;<br>    printf(“ Area = %f”, area);<br>    return area;<br> }</p><blockquote><p><strong>中断子程序不能有返回值</strong></p><p><strong>中断子程序不能传递参数</strong></p><p>*<em>在许多的处理器/<strong>*<em>编译器中，浮点一般都是不可重入的。有些处理器/<strong>*<em>编译器需要让额处的寄存器入栈，有些处理器/<strong><strong>编译器就是不允许在ISR</strong></strong>中做浮点运算。此外，ISR</em>*</strong>应该是短而有效率的，在ISR</em>*</strong>中做浮点运算是不明智的。</em>*</p><p>*<em>printf()<strong><strong>函数经常存在重入和性能问题，因此不应该在ISR</strong></strong>中使用它</em>*</p></blockquote><h2 id="代码阅读"><a href="#代码阅读" class="headerlink" title="代码阅读"></a>代码阅读</h2><p>下面的代码输出是什么，为什么？</p><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">foo</span><span class="params">(<span class="type">void</span>)</span> </span><br><span class="line">{ </span><br><span class="line">   <span class="type">unsigned</span> <span class="type">int</span> a = <span class="number">6</span>; </span><br><span class="line">   <span class="type">int</span> b = <span class="number">-20</span>; </span><br><span class="line">   (a+b &gt; <span class="number">6</span>)? <span class="built_in">puts</span>(<span class="string">"&gt; 6"</span>) : <span class="built_in">puts</span>(<span class="string">"&lt;= 6"</span>); </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><blockquote><p>有符号整数和无符号整数相加时，会将有符号整数转换为无符号整数 -20在无符号整数中使用补码存储，所以相加 大于6</p></blockquote><p>评价下面的代码片断：</p><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> <span class="type">int</span> zero = <span class="number">0</span>; </span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> compzero = <span class="number">0xFFFF</span>; </span><br><span class="line"><span class="comment">/*1‘s complement of zero */</span></span><br></pre></td></tr></tbody></table></figure><blockquote><p>应该是想表达“compzero 是一个表示-1的无符号整数”的意思</p><p>对于一个int型不是16位的处理器为说，上面的代码是不正确的。</p><p>应编写如下：</p><p>unsigned int compzero = ~0</p></blockquote><p>下面的代码片段的输出是什么，为什么？</p><figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">char</span> *ptr; </span><br><span class="line"> <span class="keyword">if</span> ((ptr = (<span class="type">char</span> *)<span class="built_in">malloc</span>(<span class="number">0</span>)) == <span class="literal">NULL</span>) </span><br><span class="line">     <span class="built_in">puts</span>(<span class="string">"Got a null pointer"</span>); </span><br><span class="line"> <span class="keyword">else</span> </span><br><span class="line">     <span class="built_in">puts</span>(<span class="string">"Got a valid pointer"</span>); </span><br></pre></td></tr></tbody></table></figure><blockquote><p>NULL  一般预定义为  (void  *)0,指向0地址。malloc是在程序堆栈上分配空间，不会是0地址malloc(0)是指分配内存大小为零</p><p>NULL是不指向任何实体</p><p>malloc(0)也是一种存在不是NULL</p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>QT</title>
       <link href="/2023/05/04/QT/"/>
       <url>/2023/05/04/QT/</url>
