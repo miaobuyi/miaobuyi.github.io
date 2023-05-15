@@ -8,7 +8,7 @@
       <link href="/2023/05/15/ARM%E6%9E%B6%E6%9E%84/"/>
       <url>/2023/05/15/ARM%E6%9E%B6%E6%9E%84/</url>
       
-        <content type="html"><![CDATA[<h2 id="一、ARM基础"><a href="#一、ARM基础" class="headerlink" title="一、ARM基础"></a>一、ARM基础</h2><ol><li><p>ARM硬件组成及运行原理</p><ol><li><p>硬件组成</p><ol><li>CPU：控制器 ALU预算期 寄存器</li><li>flash：存储程序</li><li>内存：运行程序</li></ol></li><li><p>运行原理</p><p>​设备上电之后，控制器寻址并译码，运算器进行预算，运算量及预算结果保存在寄存器</p></li></ol></li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="一、ARM基础"><a href="#一、ARM基础" class="headerlink" title="一、ARM基础"></a>一、ARM基础</h2><h3 id="ARM硬件组成及运行原理"><a href="#ARM硬件组成及运行原理" class="headerlink" title="ARM硬件组成及运行原理"></a>ARM硬件组成及运行原理</h3><ol><li><p>硬件组成</p><ol><li>CPU：控制器 ALU预算期 寄存器</li><li>flash：存储程序</li><li>内存：运行程序</li></ol></li><li><p>运行原理</p><p>​设备上电之后，控制器寻址并译码，运算器进行预算，运算量及预算结果保存在寄存器</p></li></ol><h3 id="ARM工作模式"><a href="#ARM工作模式" class="headerlink" title="ARM工作模式"></a>ARM工作模式</h3><p>ARM架构共有七种基本工作模式，它们是：</p><ol><li><p>用户模式（User Mode）：这是最基本的工作模式，处理器在这个模式下运行应用程序。应用程序不能直接访问系统资源，而是需要通过操作系统进行调用。</p></li><li><p>系统模式（System Mode）：这个模式下处理器可以访问系统资源，如中断控制器、时钟和I/O端口等，通常用于系统内核的执行。</p></li><li><p>监管模式（Supervisor Mode）：这个模式下处理器可以访问更多的系统资源，如内存管理单元（MMU），同时还可以响应外部中断和异常。监管模式通常被用于操作系统内核的特权级操作。</p></li><li><p>中断模式（Interrupt Mode）：这个模式下，处理器响应外部中断事件，并切换到中断处理程序执行。</p></li><li><p>快速中断模式（Fast Interrupt Mode）：这个模式下，处理器响应更高优先级的中断请求，以更快的速度完成中断处理。</p></li><li><p>异常模式（Abort Mode）：这个模式下，处理器在出现非法指令、地址错误或数据传输错误等异常情况时会进入异常模式，以便处理错误并继续执行。</p></li><li><p>外协处理器模式（Co-Processor Mode）：这个模式下，处理器可以与协处理器（如浮点数处理器）进行通信和协同工作。</p></li></ol><p>除了这七种基本工作模式外，还有一种叫做未定义指令模式（Undefined Instruction Mode），当处理器遇到未定义的指令时，会进入这个模式并触发异常。</p><p>monitor模式</p><p>monitor模式是ARM处理器的一种特殊工作模式，用于支持调试和系统维护功能。在monitor模式下，处理器可以访问和修改系统的内存、寄存器以及其他资源，以便进行调试和诊断。</p><p>通常情况下，monitor模式是由监管模式（Supervisor Mode）中的软件中断指令（SVC指令）触发的，通过SVC指令将处理器从当前模式切换到monitor模式。在monitor模式下，可以执行一些特殊的指令，例如读写内存、修改寄存器、设置断点等。同时，还可以通过特殊的端口与外部设备进行通信，以实现更丰富的调试和维护功能。</p><p>在实际应用中，monitor模式通常用于调试和诊断系统中的软件问题。通过在monitor模式下对系统进行诊断和调试，可以快速定位并解决软件问题，提高系统的稳定性和可靠性。同时，由于monitor模式的特殊性质，需要进行一些安全措施，以确保系统的安全和稳定性。</p>]]></content>
       
       
       
@@ -494,9 +494,9 @@
       
         <tags>
             
-            <tag> Spring </tag>
-            
             <tag> Mybatis </tag>
+            
+            <tag> Spring </tag>
             
         </tags>
       
