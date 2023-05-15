@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>ARM架构</title>
+      <link href="/2023/05/15/ARM%E6%9E%B6%E6%9E%84/"/>
+      <url>/2023/05/15/ARM%E6%9E%B6%E6%9E%84/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、ARM基础"><a href="#一、ARM基础" class="headerlink" title="一、ARM基础"></a>一、ARM基础</h2><ol><li><p>ARM硬件组成及运行原理</p><ol><li><p>硬件组成</p><ol><li>CPU：控制器 ALU预算期 寄存器</li><li>flash：存储程序</li><li>内存：运行程序</li></ol></li><li><p>运行原理</p><p>​设备上电之后，控制器寻址并译码，运算器进行预算，运算量及预算结果保存在寄存器</p></li></ol></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面试题</title>
       <link href="/2023/05/05/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
       <url>/2023/05/05/%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
